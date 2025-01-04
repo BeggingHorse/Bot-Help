@@ -6,8 +6,8 @@
   <title>BOT插件功能列表</title>
   <!-- 使用 JavaScript 动态添加随机参数到 CSS 文件 -->
   <script>
-    const timestamp = new Date().getTime();
-    document.write(`<link rel="stylesheet" href="style.css?v=${timestamp}">`);
+    const cssTimestamp = new Date().getTime();
+    document.write(`<link rel="stylesheet" href="style.css?v=${cssTimestamp}">`);
   </script>
 </head>
 <body>
@@ -31,8 +31,8 @@
 
   <!-- 使用 JavaScript 动态添加随机参数到 JavaScript 文件 -->
   <script>
-    const timestamp = new Date().getTime();
-    document.write(`<script src="script.js?v=${timestamp}"><\/script>`);
+    const jsTimestamp = new Date().getTime();
+    document.write(`<script src="script.js?v=${jsTimestamp}"><\/script>`);
   </script>
 </body>
 </html>
