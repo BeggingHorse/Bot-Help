@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#search {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+/* 新增样式：QQ群链接 */
+.qq-group {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.qq-group a {
+  color: #fff; /* 文字颜色：白色 */
+  text-decoration: none; /* 去掉下划线 */
+  font-size: 0.9em;
+  background-color: #000; /* 背景色：黑色 */
+  padding: 8px 12px; /* 内边距 */
+  border-radius: 5px; /* 圆角 */
+  transition: background-color 0.3s ease; /* 背景色过渡效果 */
+}
+
+.qq-group a:hover {
+  background-color: #333; /* 鼠标悬停时的背景色：深灰色 */
+}
+
+#plugin-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.plugin-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.plugin-card h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.function-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.function-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.function-command {
+  display: block;
+  font-family: "Courier New", monospace; /* 使用等宽字体 */
+  font-size: 0.9em;
+  color: #d63384; /* 代码块文字颜色 */
+  background-color: #f8f9fa; /* 代码块背景色 */
+  padding: 10px; /* 内边距 */
+  border: 1px solid #ddd; /* 边框 */
+  border-radius: 6px; /* 圆角 */
+  margin: 10px 0; /* 外边距 */
+  white-space: pre-wrap; /* 保留空格和换行 */
+  word-wrap: break-word; /* 自动换行 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+.function-description {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
