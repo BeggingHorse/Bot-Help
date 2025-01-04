@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BOT插件功能列表</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- 使用 JavaScript 动态添加随机参数到 CSS 文件 -->
+  <script>
+    const timestamp = new Date().getTime();
+    document.write(`<link rel="stylesheet" href="style.css?v=${timestamp}">`);
+  </script>
 </head>
 <body>
   <header>
@@ -25,6 +29,10 @@
     <p>&copy; 插件功能展示页面</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- 使用 JavaScript 动态添加随机参数到 JavaScript 文件 -->
+  <script>
+    const timestamp = new Date().getTime();
+    document.write(`<script src="script.js?v=${timestamp}"><\/script>`);
+  </script>
 </body>
 </html>
