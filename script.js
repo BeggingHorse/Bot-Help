@@ -83,11 +83,174 @@ const plugins = [
   {
     name: "FanSky_Qs",
     functions: [
-      { name: "OpenAI功能Index", command: "^早$", description: "OpenAI功能Index" },
-      { name: "FanSky小功能Index", command: "^#?(抽象帮助|cxbz)", description: "FanSky小功能" },
-      { name: "提瓦特小助手", command: "^#成就(排行|排名|查询|统计)(.*)$", description: "提瓦特小助手" },
-      { name: "未知功能", command: "®", description: "无功能说明" },
-    ],
+      {
+        name: "群管系统/设置",
+        description: "群管系统/设置",
+        command: [
+          "#fan设置",
+          "#清屏100",
+          "#批量撤回@张三/123456 20",
+          "#拉黑(群)3141865879",
+          "#解黑(群)3141865879",
+          "#加白群755794036"
+        ]
+      },
+      {
+        name: "原神系统[非小酋、提瓦特小助手]",
+        description: "原神系统[非小酋、提瓦特小助手]",
+        command: [
+          "#队伍伤害神鹤万心",
+          "#宝箱排行",
+          "#成就排行",
+          "#宝箱排行榜",
+          "#成就排行榜"
+        ]
+      },
+      {
+        name: "魔晶系统 [小游戏开发中]",
+        description: "魔晶系统 [小游戏开发中]",
+        command: [
+          "#加/减魔晶123456 100",
+          "打卡",
+          "冒泡",
+          "首次打卡时间",
+          "emoji猜成语"
+        ]
+      },
+      {
+        name: "娱乐系统",
+        description: "娱乐系统",
+        command: [
+          "l图",
+          "龙图",
+          "加l图",
+          "#更新l图",
+          "有多少l图",
+          "d图",
+          "弔图",
+          "加d图",
+          "#更新d图",
+          "有多少d图",
+          "抽象帮助",
+          "cxbz",
+          "抽象xxxx",
+          "化学xxx",
+          "鸡哥",
+          "小黑子",
+          "一眼丁真",
+          "电影票房",
+          "点赞",
+          "#发病",
+          "#发病@张三",
+          "@机器人"
+        ]
+      },
+      {
+        name: "聊天系统",
+        description: "聊天系统",
+        command: [
+          "#fan聊天菜单",
+          "OpenAI项过多，已经分离到【#fan聊天菜单】中"
+        ]
+      },
+      {
+        name: "其他命令",
+        description: "其他命令",
+        command: [
+          "#检测fan更新",
+          "打卡总计"
+        ]
+      },
+      {
+        name: "OpenAI菜单：艾特机器人即可开始聊天",
+        description: "OpenAI菜单：艾特机器人即可开始聊天",
+        command: [
+          "#dd你要说的话",
+          "#模型人设列表",
+          "#使用模型人设x",
+          "#key剩余查询",
+          "#重置对话",
+          "#设置模型人设xxx"
+        ]
+      },
+      {
+        name: "OpenAI主人菜单",
+        description: "OpenAI主人菜单",
+        command: [
+          "#设置模型代理地址xxx",
+          "#查看模型key",
+          "#删除fan代理",
+          "#fan设置模型接口4开启/关闭",
+          "#关闭模型艾特对话",
+          "设置模型打卡开启",
+          "#设置模型key xxx",
+          "#设置全局人设xxx",
+          "#设置模型模式x",
+          "#开启群模型123456",
+          "#关闭群模型123456",
+          "#设置模型转合并100",
+          "设置OpenAI开启",
+          "#清空全部",
+          "拉黑模型使用[QQ]"
+        ]
+      },
+      {
+        name: "【打卡-魔晶系统】[正在开发小游戏]",
+        description: "【打卡-魔晶系统】[正在开发小游戏]",
+        command: [
+          "打卡",
+          "冒泡",
+          "首次打卡时间",
+          "emoji猜成语",
+          "打卡总计"
+        ]
+      },
+      {
+        name: "原神菜单[数据：非小酋、提瓦特小助手]",
+        description: "原神菜单[数据：非小酋、提瓦特小助手]",
+        command: [
+          "#队伍伤害xx xx...",
+          "#队伍面板",
+          "#宝箱排行",
+          "#成就排行",
+          "#宝箱排行榜",
+          "#成就排行榜"
+        ]
+      },
+      {
+        name: "主人设置",
+        description: "主人设置",
+        command: [
+          "#开启fan点赞"
+        ]
+      },
+      {
+        name: "单功能菜单",
+        description: "单功能菜单",
+        command: [
+          "l图",
+          "龙图",
+          "加l图",
+          "#更新l图",
+          "有多少l图",
+          "d图",
+          "弔图",
+          "加d图",
+          "#更新d图",
+          "有多少d图",
+          "抽象帮助",
+          "cxbz",
+          "抽象xxxx",
+          "化学xxx",
+          "鸡哥",
+          "小黑子",
+          "一眼丁真",
+          "电影票房",
+          "点赞",
+          "发病"
+        ]
+      }
+    ]
   },
   {
     name: "genshin",
@@ -138,7 +301,6 @@ const plugins = [
       { name: "锅巴帮助", command: "^#?锅巴(帮助|菜单|说明|功能|指令|命令|使用说明|help)$", description: "锅巴插件帮助" },
       { name: "锅巴登录", command: "^#?锅巴(登录|登陆)$", description: "锅巴快捷登录" },
       { name: "锅巴更新", command: "^#锅巴版本$", description: "锅巴更新、升级" },
-      { name: "未知功能", command: "^#?锅巴", description: "无功能说明" },
     ],
   },
   {
@@ -319,14 +481,102 @@ const plugins = [
   {
     name: "windoge-plugin",
     functions: [
-      { name: "windoge-plugin", command: ".+", description: "无功能说明" },
-      { name: "未知功能", command: "^#windoge(强制)?更新$", description: "无功能说明" },
-      { name: "未知功能", command: "^#群通知帮助$", description: "无功能说明" },
-      { name: "未知功能", command: "^#(抽卡|[0-6]命|精[(0|1|5)])+期望+$", description: "无功能说明" },
-      { name: "未知功能", command: "^#*(多|全|全部)*(便笺|便签|派遣)$", description: "无功能说明" },
-      { name: "未知功能", command: "^#*(天赋|武器|周本)+素材+$", description: "无功能说明" },
-      { name: "未知功能", command: "^#*[^-~]+参考面板+$", description: "无功能说明" },
-    ],
+      {
+        name: "体力",
+        description: "体力",
+        command: ["^#*(多|全|全部)*(便笺|便签|派遣)$"]
+      },
+      {
+        name: "体力模板设置",
+        description: "体力模板设置",
+        command: ["^#((便笺|便签)模板(设置(.*)|列表(.*))|(我的(便笺|便签)模板列表|(便笺|便签)模板移除(.*)))$"]
+      },
+      {
+        name: "查看插件的功能",
+        description: "查看插件的功能",
+        command: ["^#?(windoge)?(命令|帮助|菜单|help|说明|功能|指令|使用说明)$"]
+      },
+      {
+        name: "体力",
+        description: "体力",
+        command: ["#poke#"]
+      },
+      {
+        name: "参考面板",
+        description: "参考面板",
+        command: ["^#*[^-~]+参考面板+$"]
+      },
+      {
+        name: "素材表",
+        description: "素材表",
+        command: ["^#*(天赋|武器|周本)+素材+$"]
+      },
+      {
+        name: "原石预估",
+        description: "原石预估",
+        command: ["^#*([1-9]\\.[0-9])?原石(预估|预期)+$"]
+      },
+      {
+        name: "版本",
+        description: "版本",
+        command: ["^#?windoge版本$"]
+      },
+      {
+        name: "参考面板说明",
+        description: "参考面板说明",
+        command: ["^#?参考面板说明$"]
+      },
+      {
+        name: "国际服hoyolab白嫖原石活动",
+        description: "国际服hoyolab白嫖原石活动",
+        command: ["^#*国际服(白嫖|羊毛|活动)$"]
+      },
+      {
+        name: "国际服当前可用兑换码",
+        description: "国际服当前可用兑换码",
+        command: ["^#*(国际服|国服)?兑换码$"]
+      },
+      {
+        name: "抽卡期望表",
+        description: "抽卡期望表",
+        command: ["^#(抽卡|[0-6]命|精[(0|1|5)])+期望+$"]
+      },
+      {
+        name: "充值汇率",
+        description: "充值汇率",
+        command: ["^#(Google|google|谷歌|安卓)?充值(汇率|价格)(all)*$"]
+      },
+      {
+        name: "深渊攻略",
+        description: "深渊攻略",
+        command: ["^#?(更新)?([1-9]\\.[0-9])深渊攻略[1-4]?$"]
+      },
+      {
+        name: "查询角色/武器的复刻信息",
+        description: "查询角色/武器的复刻信息",
+        command: ["^#未复刻(4星|四星|5星|五星)*(角色|武器)*$"]
+      },
+      {
+        name: "查询单个角色/武器的复刻信息",
+        description: "查询单个角色/武器的复刻信息",
+        command: ["^#(.)+(复刻|复刻间隔|up|UP|Up)$"]
+      },
+      {
+        name: "查询素材采集路线",
+        description: "查询素材采集路线",
+        command: ["^#(.+)(收集|采集|讨伐|收集路线|采集路线|讨伐路线)$"]
+      },
+      {
+        name: "查询角色素材收集攻略",
+        description: "查询角色素材收集攻略",
+        command: ["^#?(.+)(培养|突破|养成)(素材|材料)?收集$"]
+      },
+      {
+        name: "清空Redis缓存",
+        description: "清空Redis缓存",
+        command: ["^#?windoge(清理|清空|删除)缓存$"]
+      }
+    ]
   },
   {
     name: "ws-plugin",
